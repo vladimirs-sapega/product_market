@@ -41,7 +41,7 @@ public class ProductsController {
         product.setId(id);
         product.setName(name);
 //        ----------------------------
-        try (FileOutputStream f = new FileOutputStream("myProducts");
+        try (FileOutputStream f = new FileOutputStream("src/main/resources/products/myProducts.txt");
              PrintStream o = new PrintStream(f,true, StandardCharsets.UTF_8)) {
 
             o.write(product.toString().getBytes(StandardCharsets.UTF_8));
