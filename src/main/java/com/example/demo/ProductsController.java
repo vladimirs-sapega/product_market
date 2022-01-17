@@ -40,7 +40,7 @@ public class ProductsController {
         Product product = new Product();
         product.setId(id);
         product.setName(name);
-//        ----------------------------
+
         try (FileOutputStream f = new FileOutputStream("src/main/resources/products/myProducts.txt");
              PrintStream o = new PrintStream(f,true, StandardCharsets.UTF_8)) {
 
@@ -52,7 +52,7 @@ public class ProductsController {
 
 
     }
-//read String  readFromTxt
+
     @PostMapping(value = "/products/v2/{id}/{name}/")
     public void addProduct2(@PathVariable String id, @PathVariable String name) {
 
